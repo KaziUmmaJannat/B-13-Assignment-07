@@ -1,8 +1,9 @@
 import { createBrowserRouter } from "react-router";
-import MainLayout from "../Layout/MainLayout";;
+import { Suspense } from "react";
+import MainLayout from "../Layout/MainLayOut";
 import TimeLine from "../Pages/TimeLine";
 import HomePage from "../Pages/HomePage";
-import states from "../Pages/states";
+import States from "../Pages/States";
 import ErrorPage from "../Pages/ErrorPage";
 import FriendsDetails from "../FriendsDetails/FriendsDetails";
 
@@ -13,7 +14,7 @@ export const router =createBrowserRouter([
     children:[
         {
             index:true,
-            Component:HomePage
+            element:<Suspense fallback={<div className="flex justify-center mt-20">Loading...</div>}><HomePage /></Suspense>
 
         },
         {
@@ -26,7 +27,7 @@ export const router =createBrowserRouter([
         },
         {
             path:'/states',
-            Component:states
+            Component:States
 
         },
     

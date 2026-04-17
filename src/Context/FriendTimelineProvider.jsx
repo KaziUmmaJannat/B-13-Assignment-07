@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FriendTimeLineContext } from './FriendTimeLineContext';
+import { FriendTimeLineContext } from './FriendTimelineContext';
 
 
 
